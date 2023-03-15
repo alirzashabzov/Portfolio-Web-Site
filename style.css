@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&family=Oswald:wght@500&display=swap');
+
+/*
+font-family: 'Oswald',
+sans-serif;*/
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.4rem;
+    background-color: white;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 3rem;
+    background-color: rgb(88, 77, 77);
+}
+
+.toggle {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #000 url(images/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.toggle.active {
+    background: #000 url(images/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+section {
+    padding: 100px;
+    min-height: 100vh;
+
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.banner .SideBarimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+}
+
+.banner .SideBarimg img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .contentBx,
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 500px);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.banner .contentBx .logoText {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #333;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.banner .contentBx h4 {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.banner .contentBx h4 span {
+    color: #00bcd4;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner .contentBx h2 {
+    font-size: 3em;
+    color: #333;
+    line-height: 1em;
+}
+
+p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.Btn {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+}
+
+.sidebar {
+    position: fixed;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: 0.5s;
+    z-index: 100;
+    right: -100%;
+}
+
+.sidebar.active {
+    right: 0;
+
+}
+
+.sidebar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    list-style: none;
+
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 10px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.sidebar ul li a:hover {
+    color: #00bcd4;
+
+}
+
+.sci {
+
+    position: absolute;
+    left: 100px;
+    bottom: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    margin-right: 10px;
+    list-style: none;
+
+}
+
+.sci li img {
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+
+.sci li img:hover {
+    opacity: 2;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.title h2 {
+    position: relative;
+    color: #00bcd4;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.title p {
+    max-width: 700px;
+    display: inline-block;
+
+}
+
+.title h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10%;
+    width: 60px;
+    height: 4px;
+    background: #00bcd4;
+}
+
+.title.white p {
+    color: #fff;
+
+}
+
+.title.white h2::before {
+    background-color: #00bcd4;
+}
+
+.about {
+    background: #000;
+}
+
+
+.about .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about .content .textBx {
+    min-width: 49%;
+    width: 49%;
+
+}
+
+.about .content .textBx p {
+    color: #fff;
+
+}
+
+
+.about .content .imgbx {
+    margin-left: 40px;
+}
+
+.about .content .imgbx img {
+    max-width: 100%;
+
+}
+
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.services .content .servicesBx {
+    padding: 40px 20px;
+    max-width: 340px;
+    margin: 20px;
+    transition: 0.5s;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.services .content .servicesBx:hover {
+    background-color: #000;
+}
+
+.services .content .servicesBx img {
+    max-width: 80px;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover img {
+    filter: invert(1);
+}
+
+.services .content .servicesBx h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover h2 {
+    color: #fff;
+
+}
+
+.services .content .servicesBx p {
+    margin: 0;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover p {
+
+    color: #fff;
+
+
+}
+
+.work .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.work .content .workBx {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    margin: 10px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.work .content .workBx .imgBx,
+.work .content .workBx .textBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.work .content .workBx .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.work .content .workBx .textBx {
+    background-color: #000;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.work .content .workBx:hover .textBx {
+
+    opacity: 1;
+
+}
+
+.work .content .workBx .textBx h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+}
+
+.contact {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contactFrom {
+    position: relative;
+    width: 700px;
+    margin-top: 20px;
+
+}
+
+.contact .contactFrom .row {
+    width: 100%;
+    display: flex;
+
+}
+
+.contact .contactFrom .row .col50 {
+    width: 50%;
+    margin: 10px;
+
+}
+
+.contact .contactFrom .row .col100 {
+
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+.contact .contactFrom .row input,
+.contact .contactFrom .row textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #fff;
+    font-size: 18px;
+    resize: none;
+}
+
+.contact .contactFrom .row textarea {
+
+    height: 160px;
+}
+
+.contact .contactFrom .row input[type='submit'] {
+
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+
+.copyright {
+    color: #f5f5f5;
+    background-color: #111;
+    text-align: center;
+    padding: 10px;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 16px;
+
+}
+
+@media (max-width:991px) {
+    .banner .SideBarimg {
+        display: none;
+
+    }
+
+    .banner .contentBx, .sidebar
+    {
+
+        width: 100%;
+        padding: 80px;
+
+    }
+
+    .banner .contentBx .logoText {
+        left: 80px;
+        top: 3px;
+    }
+
+    .toggle {
+        right: 40px;
+    }
+
+    .sci {
+        left: 80px;
+        bottom: 50px;
+    }
+
+    section {
+        padding: 40px;
+
+    }
+
+    .about .content {
+
+        flex-direction: column;
+    }
+
+    .about .content .textBx {
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .about .content {
+
+        margin-top: 0;
+    }
+
+    .about .content .imgbx {
+        margin-left: 0;
+    }
+
+    .services .content .servicesBx {
+        padding: 30px 20px;
+        max-width: 340px;
+        margin: 10px;
+
+    }
+
+    .contact .contactFrom {
+        width: 100%;
+
+    }
+
+    .contactFrom .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact .contactFrom .row .col50 {
+        width: 100%;
+
+    }
+
+    .sidebar ul li a {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width:500px) {
+
+    .services .content .servicesBx,
+    .work .content .workBx {
+
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+
+
+
+}
